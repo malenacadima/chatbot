@@ -1,49 +1,52 @@
-#Funciones para las plataformas de los webinars:
-def instrucciones_zoom(palabra_clave):
-#	print('Acá estarán las instrucciones para usar Zoom')
+class Webinar:
+	"""docstring for Zoom"""
+	def __init__(self, nombre, tipo_de_aplicacion, informacion, descargar_celular, descargar_computadora, navegador):
+		self.nombre = nombre
+		self.tipo_de_aplicacion = tipo_de_aplicacion
+		self.informacion = informacion
+		self.descargar_celular = descargar_celular
+		self.descargar_computadora = descargar_computadora
+		self.navegador = navegador
+	
+	def crear_cuenta(self):
+		print('Intrucciones para crear una cuenta')
+
+	def loguearse(self):
+		print('Instrucciones para loguearse')
+
+	def entrar_reunion():
+		print('Instrucciones para entrar a una reunión')
+
+def datos(palabra_clave = ''):
 	if palabra_clave.lower() == 'zoom':
-		return '¿Qué tenes que hacer en Zoom?'
+		return('Zoom', 'Webinar', 'aplicación para realizar reuniones virtuales', True, True, False)
+	elif palabra_clave.lower() == 'googlemeet' or palabra_clave.lower() == 'meet' or palabra_clave.lower() == 'google meet':
+		return('Google Meet', 'Webinar', 'aplicación para realizar reuniones virtuales', True, False, True)
+	elif palabra_clave.lower() == 'jistmeet' or palabra_clave.lower() == 'jist meet' or palabra_clave.lower() == 'jist':
+		return('Jist Meet', 'Webinar', 'aplicación para realizar reuniones virtuales', True, False, True)
 
-def instrucciones_jistmeet(palabra_clave):
-#	print('Acá estarán las instrucciones para usar Jitsmeet')
-	if palabra_clave.lower() == 'jitsmeet' or palabra_clave.lower() == 'jits meet':
-		return '¿Qué tenes que hacer en JistMeet?'
 
-def instrucciones_googlemeet(palabra_clave):
-	print('Acá estarán las instrucciones para usar Google Meet')
-	if palabra_clave.lower() == 'zoom':
-		return '¿Qué tenes que hacer en Zoom?'
-#Funciones para las plataformas educativas:
-def instrucciones_google_classroom(palabra_clave):
-	print('Acá estarán las instrucciones para usar Google Classroom')
-
-def instrucciones_edmodo(palabra_clave):
-	print('Acá estarán las instrucciones para usar EdModo')
-
-def instrucciones_moodle(palabra_clave):
-	print('Acá estarán las instrucciones para usar Moodle')
-
-#Funciones de interaccion
-def saludos_y_demas(palabra_clave):
-#	print('Acá estan los saludos y demás')
-	if palabra_clave == 'saludo':
-		return 'Hola, soy Tito. ¿Cómo te puedo ayudar?'
+def analisis_pregunta_usuario(pregunta_usuario):
+	for palabra in pregunta_usuario.split():
+		if palabra == 
+def saludos():
+	return 'Hola soy TITO. ¿Cómo te puedo ayudar?'
 
 #----> Programa principal <----
 
 respuesta = 'none'
-
-print(saludos_y_demas('saludo'))
-
+print(saludos())
 while respuesta.lower() != 'chau':
-	#llamo a las funciones y analisan la respuesta
 	respuesta = input('Vos:  ')
-	instrucciones_zoom(respuesta)
-	instrucciones_jistmeet(respuesta)
-	instrucciones_googlemeet(respuesta)
-	instrucciones_moodle(respuesta)
-	instrucciones_edmodo(respuesta)
-	instrucciones_google_classroom(respuesta)
+	analisis_pregunta_usuario(respuesta)
+
+
+
+
+
+
+
+
 
 
 
